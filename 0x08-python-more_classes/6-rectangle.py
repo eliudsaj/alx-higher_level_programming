@@ -9,7 +9,7 @@ A module that provides a Rectangle class.
 class Rectangle:
     """Rectangle class with attributes width and height,
     methods area, perimeter, print, str, repr, and del, and
-    class attribute number_of_instances that keeps track of number of instances.
+    class attribute that keeps track of number of instances.
     """
 
     number_of_instances = 0
