@@ -2,7 +2,7 @@
 """Defination add_integer"""
 
 
-def add_integer(a, b):
+def add_integer(a, b=98):
     """Calculates the sum of two integers
 
     Args:
@@ -13,11 +13,10 @@ def add_integer(a, b):
     Returns:
         The sum of a and b
     """
-    h = list(map(lambda x: isinstance(x, (int, float)), [a, b]))
-
-    if all(h):
-        return int(a) + int(b)
-
-    for x, y in list(zip(h, ['a', 'b'])):
-        if not x:
-            raise TypeError("{} must be an integer".format(y))
+    if not (isinstance(a, int) or isinstance(a, float)):
+        raise TypeError("a must be an integer")
+    elif not (isinstance(b, int) or isinstance(b, float)):
+        raise TypeError("b must be an integer")
+    a = int(a)
+    b = int(b)
+    return a + b
