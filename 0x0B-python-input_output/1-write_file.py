@@ -8,8 +8,8 @@ def number_of_lines(filename=""):
     contains arguments and the filename The name and path of the file to print.
     Returns the number of lines.
     """
-    lines = 0
-    with open(filename, "r", encoding="utf-8") as f:
-        while f.readline() != "":
-            lines += 1
-    return lines
+    count = 0
+    with open(filename, encoding="utf-8") as fd:
+        for line in fd:
+            count += 1
+    return count
