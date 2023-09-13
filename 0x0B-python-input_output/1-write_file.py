@@ -5,9 +5,8 @@
 def write_file(filename="", text=""):
     """Calculates the number of lines in a file.
 
-    contains arguments and the filename The name and path of the file to append.
+    contains arguments and the filename The name and path of the file to print.
     Returns the number of lines.
-    return number of characters appended
     """
     with open(filename, "w", encoding="utf-8") as f:
         return f.write(text)
